@@ -20,7 +20,7 @@ __./main.py__ 파일 실행
 
 <br>
 
-### 2. PrediCtionMoneyBog Respon Command Add
+### 2. PrediCtionMoneyBog Response Command Add
 
 <br>
 
