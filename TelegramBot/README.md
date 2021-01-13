@@ -8,7 +8,7 @@ __태그 : @PrediCtionMoneyBot__
 
 <br>
 
-#### 1. PrediCtionMoneyBot Start
+### 1. PrediCtionMoneyBot Start
 
 <br>
 
@@ -16,7 +16,7 @@ __./main.py__ 파일 실행
 
 <br>
 
-#### 2. PrediCtionMoneyBog Respon Command Add
+### 2. PrediCtionMoneyBog Respon Command Add
 
 <br>
 
