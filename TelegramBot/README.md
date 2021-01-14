@@ -33,6 +33,8 @@ TelegramBot.bot_start()
 
 위 코드처럼 봇을 스타트시키면 __/start__ 과 __/help__ 명령어에 반응하게 됩니다.
 
+* * *
+
 ### 텔레그램 봇 반응시 함수 실행
 
 텔레그램 봇을 실행하는 도중 특정 커맨드를 입력하면 함수를 실행시키기 위해
@@ -50,6 +52,7 @@ TelegramBot.FunctionCmd_Add('help', test)
 TelegramBot.bot_start()
 ```
 
+* * *
 
 ### 텔레그램 봇 일정 시간마다 함수 실행
 
