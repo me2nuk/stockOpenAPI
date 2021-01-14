@@ -8,7 +8,7 @@ __태그 : @PrediCtionMoneyBot__
 
 <br>
 
-### 텔레그램 봇 반응 커멘드 추가
+### 1. 텔레그램 봇 반응 커멘드 추가
 
 텔레그램 봇이 /start 같은 커멘드에 반응하기 위해선
 ./Telegram_CommandList.py 파일의 BotStartCommand 변수를 추가하면 됩니다.
@@ -37,7 +37,7 @@ TelegramBot.bot_start()
 
 <br>
 
-### 텔레그램 봇 반응시 함수 실행
+### 2. 텔레그램 봇 반응시 함수 실행
 
 텔레그램 봇을 실행하는 도중 특정 커맨드를 입력하면 함수를 실행시키기 위해
 
@@ -58,7 +58,7 @@ TelegramBot.bot_start()
 
 <br>
 
-### 텔레그램 봇 일정 시간마다 함수 실행
+### 3. 텔레그램 봇 일정 시간마다 함수 실행
 
 <br>
 
