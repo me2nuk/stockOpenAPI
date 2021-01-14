@@ -45,7 +45,7 @@ class TelegramBot_Run:
         try:
             TelegramBotStart.start_polling()
             return True
-except:
+        except:
             return False
 
 
