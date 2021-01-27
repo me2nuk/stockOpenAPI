@@ -4,7 +4,7 @@ TelegramBot = BotStart.TelegramBot_Run()
 TelegramBot.Cmd_Add()
 TelegramBot.bot_start()
 """
-"""import BotStart
+import BotStart
 
 TelegramBot = BotStart.TelegramBot_Run()
 
@@ -12,7 +12,7 @@ def test():
     return 'HelloWorld'
 
 TelegramBot.FunctionCmd_Add('help', test)
-TelegramBot.bot_start()"""
+TelegramBot.bot_start()
 """def test():
     print('hello')
 
