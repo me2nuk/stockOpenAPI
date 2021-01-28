@@ -9,10 +9,6 @@ GopaxApi Link
 
 + #### Sample Python Source code
 
-<details>
-<summary>JavaScript</summary>
-<div markdown="1">
-
 ```py
 import base64, hashlib, hmac, json, requests, time
 
@@ -56,9 +52,6 @@ print(call(True, 'GET', '/trades?limit=1'))
 print(call(False, 'GET', '/trading-pairs/BTC-KRW/book?level=1'))
 ```
 
-</div>
-</details>
-
 <br>
 
 * * *
@@ -66,10 +59,6 @@ print(call(False, 'GET', '/trading-pairs/BTC-KRW/book?level=1'))
 <br>
 
 + #### Sample JavaScript Source code
-
-<details>
-<summary>JavaScript</summary>
-<div markdown="1">
 
 ```js
 const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
@@ -120,9 +109,6 @@ printAllDepth(call(true, 'GET', '/trades?limit=1'));
 printAllDepth(call(false, 'GET', '/trading-pairs/BTC-KRW/book?level=1'));
 ```
 
-</div>
-</details>
-
 <br>
 
 * * *
@@ -130,10 +116,6 @@ printAllDepth(call(false, 'GET', '/trading-pairs/BTC-KRW/book?level=1'));
 <br>
 
 + #### Sample Go lang Source code
-
-<details>
-<summary>Go lang</summary>
-<div markdown="1">
 
 ```go
 package main
@@ -227,5 +209,8 @@ func main() {
 }
 ```
 
-</div>
-</details>
+<br> 
+
+* * *
+
+<br>
