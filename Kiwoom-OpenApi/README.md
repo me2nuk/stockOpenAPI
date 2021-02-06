@@ -54,4 +54,16 @@
 
 ### kiwoom OpenAPI ErrorMsg
 
+```
+# 버전 처리를 받으시려면 현재 실행 중인 OpenAPI OCX를 탑재한 프로그램을 종료하신 후 확인버튼을 눌러주시기 바랍니다.
+그대로 진행시 버전처리가 정상적으로 실행되지 않습니다.
+```
+
+<br>
+
 ![OpenAPIErrorkiwoomOpenAPI](./Kiwoom-Image/opstarterOpenAPI_OCX.png)
+
+위의 경고 메세지가뜬다면 현재 실행중인 키움증권 OpenAPI창을 닫고 
+KOA Studio를 연 다음 
+
+![OpenAPIErrorkiwoomOpenAPI-1](./Kiwoom-Image/opstarterOpenAPI_OCX_KOA.png)
