@@ -25,7 +25,7 @@
 
 <br>
 
-![OpenApi](./OpenApiMainPage.png)
+![OpenApi](./Kiwoom-Image/OpenApiMainPage.png)
 
 <br>
 
@@ -54,4 +54,4 @@
 
 ### kiwoom OpenAPI ErrorMsg
 
-![OpenAPIErrorkiwoomOpenAPI](opstarterOpenAPI_OCX.png)
+![OpenAPIErrorkiwoomOpenAPI](./Kiwoom-Image/opstarterOpenAPI_OCX.png)
