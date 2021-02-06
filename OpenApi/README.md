@@ -42,16 +42,15 @@
 + ##### Step3
 
     + 개발가이드
-
     + KOA Studio
-  
     + 교육 VOD
- 
     + 자료실
 
 + ##### Step4
 
     + 상시 모의투자 신청
+
+<br>
 
 ### kiwoom OpenAPI ErrorMsg
 
