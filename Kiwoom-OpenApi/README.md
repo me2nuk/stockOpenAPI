@@ -12,6 +12,10 @@
 
 ### Kiwoom OpenAPI Contents
 
+* * *
+
+<br>
+
 + [키움증권 OpenApi](#키움증권-openapi)
 
     + [Kiwoom OpenAPI Contents](#kiwoom-openapi-contents)
@@ -23,6 +27,8 @@
 
 ### Kiwoom OpenApi
 
+* * *
+
 <br>
 
 ![OpenApi](./Kiwoom-Image/OpenApiMainPage.png)
@@ -30,6 +36,10 @@
 <br>
 
 ### OpenAPI Step
+
+* * *
+
+<br>
 
 + ##### Step1
 
@@ -53,6 +63,10 @@
 <br>
 
 ### kiwoom OpenAPI ErrorMsg
+
+* * *
+
+<br>
 
 ```
 # 버전 처리를 받으시려면 현재 실행 중인 OpenAPI OCX를 탑재한 프로그램을 종료하신 후 확인버튼을 눌러주시기 바랍니다.
