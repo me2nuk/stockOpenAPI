@@ -10,7 +10,18 @@
 
 <br><br>
 
-#### OpenApi+
+### Kiwoom OpenAPI Contents
+
++ [키움증권 OpenApi](#키움증권-openapi)
+
+    + [Kiwoom OpenAPI Contents](#kiwoom-openapi-contents)
+    + [Kiwoom OpenApi](#kiwoom-openapi)
+    + [OpenAPI Step](#openapi-step)
+    + [kiwoom OpenAPI ErrorMsg](#kiwoom-openapi-errormsg)
+
+<br>
+
+### Kiwoom OpenApi
 
 <br>
 
@@ -18,24 +29,30 @@
 
 <br>
 
-#### OpenAPI Step
+### OpenAPI Step
 
 + ##### Step1
 
-    OpenApi 서비스 사용 신청
+   + OpenApi 서비스 사용 신청
 
 + ##### Step2
 
-    키움 Open API+ 모듈 다운로드
+    + 키움 Open API+ 모듈 다운로드
 
 + ##### Step3
 
     + 개발가이드
+
     + KOA Studio
+  
     + 교육 VOD
+ 
     + 자료실
 
 + ##### Step4
 
     + 상시 모의투자 신청
 
+### kiwoom OpenAPI ErrorMsg
+
+![OpenAPIErrorkiwoomOpenAPI](opstarterOpenAPI_OCX.png)
