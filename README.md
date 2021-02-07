@@ -163,7 +163,7 @@ __아직 작성중__
 + __[opstarter](#-opstarter)__
 + __[mfc100.dll](#-mfc100dll)__
 + __[MSVCR100.dll](#-msvcr100dll)__
-+ __[QAxBase Error](#-qaxBaseerror)__
++ __[QAxBase Error](#-qaxbase-error)__
 
 <br>
 
