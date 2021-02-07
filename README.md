@@ -87,9 +87,12 @@
 
         > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
 
-        [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_CommConnect.py)
+        + [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_CommConnect.py)
 
-        ActiveX를 사용하여 KHOPENAPI.KHOpenAPICtrl.1를 불러온 다음 CommConnect()한 다음 <br><br>
+        <br>
+
+        ActiveX를 사용하여 KHOPENAPI.KHOpenAPICtrl.1를 불러온 다음 CommConnect()한 다음 
+        <br>
 
         <p align="left"><img src="./Kiwoom-Image/kiwoomOpenAPILogin.png"></p>
 
