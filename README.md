@@ -146,7 +146,9 @@ KOA StudioSA프로그램 종료시키고 전에나온 opstarter 경고 메세지
 
 __확인 버튼을 누른 다음 업데이트 버튼이 나오는데 확인 버튼을 누르고 다시시작하면 된다.__
 
-<br><br>
+<br>
+<hr style="border-bottom: 1px solid var(--color-border-secondary);">
+<br>
 
 ### mfc100.dll
 
