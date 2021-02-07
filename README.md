@@ -77,10 +77,7 @@
 
 <br>
 
-<div style="text-align:center">
-<img src="./Kiwoom-Image/opstarterOpenAPI_OCX.png" alt="OpenAPIErrorkiwoomOpenAPI" style="display:inline-block;text-align:center;">
-</div>
-
+<p align="center"><img src="./Kiwoom-Image/opstarterOpenAPI_OCX.png"></p>
 
 위의 경고 메세지가뜬다면 현재 실행중인 키움증권 OpenAPI창을 닫고 
 KOA Studio를 연 다음 
