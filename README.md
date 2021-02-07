@@ -87,7 +87,7 @@
 
         > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
 
-        + [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_CommConnect.py)
+        + [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_CommConnect.py)
 
         <br>
 
