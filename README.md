@@ -113,7 +113,7 @@ __아직 작성중__
 
 <br>
 
-### opstarter
+### \# opstarter
 
 ```
 버전 처리를 받으시려면 현재 실행 중인 OpenAPI OCX를 탑재한 프로그램을 종료하신 후 확인버튼을 눌러주시기 바랍니다.
@@ -147,10 +147,12 @@ KOA StudioSA프로그램 종료시키고 전에나온 opstarter 경고 메세지
 __확인 버튼을 누른 다음 업데이트 버튼이 나오는데 확인 버튼을 누르고 다시시작하면 된다.__
 
 <br>
-<hr style="border-bottom: 1px solid var(--color-border-secondary);">
+
+* * *
+
 <br>
 
-### mfc100.dll
+### \# mfc100.dll
 
 ```
 mfc100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로그램을 다시 설치하면 이 문제가 해결될 수 있습니다.
@@ -180,9 +182,13 @@ https://www.microsoft.com/ko-KR/download/confirmation.aspx?id=14632
 
 각 운영체제마다 다른 URL에 들어가서 접속한 후 다운로드되는 파일을 실행하면서 설치해주면 된다.
 
-<br><br>
+<br>
 
-### MSVCR100.dll
+* * *
+
+<br>
+
+### \# MSVCR100.dll
 
 ```
 MSVCR100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로그램을 다시 설치하면 이 문제가 해결될 수 있습니다.
