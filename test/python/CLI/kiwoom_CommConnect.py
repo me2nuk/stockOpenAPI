@@ -11,6 +11,7 @@ class PyQt_kiwoomConnect:
     def Login_Event(self, err_code):
         if err_code == 0:
             print('키움증권 OpenAPI+ 로그인 성공')
+            print(self.kiwoom.dynamicCall("OnEventConnect()"))
             sys.exit()
 
 if __name__ == "__main__":
