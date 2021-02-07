@@ -164,6 +164,7 @@ __아직 작성중__
 + __[mfc100.dll](#-mfc100dll)__
 + __[MSVCR100.dll](#-msvcr100dll)__
 + __[QAxBase Error](#-qaxbase-error)__
++ __[ModuleNotFoundError](#-modulenotfounderror)__
 
 <br>
 
@@ -273,3 +274,19 @@ python PyQt 모듈을 사용하여 KHOPENAPI.KHOpenAPICtr1.1 Active를 불러오
 
 __제거(R)__ 를 눌러 설치된 모든 기능을 제거한 다음 다시 OpenAPISetup.exe를 실행하고 설치하면된다.
 
+### \# ModuleNotFoundError
+
+```
+ModuleNotFoundError: No module named 'PyQt5'
+```
+
+<br>
+
+python PyQt5를 사용할때 ModuleNotFoundError 에러가 난다면 cmd 또는 터미널창에
+
+```bash
+pip install PyQt5
+pip3 install PyQt5
+```
+
+본인의 pip 버전에 맞게 PyQt5를 설치하면 된다.
