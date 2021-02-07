@@ -143,10 +143,6 @@ MSVCR100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로�
 
 <br>
 
-<center>
-
 <p align="center"><img src="./Kiwoom-Image/MSVCR100dll.png"></p>
-
-</center>
 
 해당 에러또한 위의 [mfc100.dll](#mfc100dll) 에러와 동일하게 따라하면 해결할 수 있다.
