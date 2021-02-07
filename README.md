@@ -77,30 +77,30 @@
 
 <br>
 
-<center>
-
 ![OpenAPIErrorkiwoomOpenAPI](./Kiwoom-Image/opstarterOpenAPI_OCX.png)
 
-</center>
 
 위의 경고 메세지가뜬다면 현재 실행중인 키움증권 OpenAPI창을 닫고 
 KOA Studio를 연 다음 
 
-<center>
-
 ![OpenAPIErrorkiwoomOpenAPI-1](./Kiwoom-Image/opstarterOpenAPI_OCX_KOA.png)
-
-</center>
 
 __파일(F)>Open API__ 접속 누르고 로그인을 하면 위의 __opstarter 경고 메세지__ 가 또 뜨게되는데
 
-<center>
-
 ![kiwoomOpenAPILogin](./Kiwoom-Image/kiwoomOpenAPILogin.png)
 
-</center>
 
 그때 해당 경고 메세지의 경고창을 닫지말고 
+
+![KOAStudio](./Kiwoom-Image/KOAStudio.png)
+
+<br>
+
+KOA StudioSA프로그램 종료시키고 전에나온 opstarter 경고 메세지의 확인 버튼을 누르면된다.
+
+![OprnAPIUpdaetError](./Kiwoom-Image/KiwoomUpdateError.png)
+
+__확인 버튼을 누른 다음 업데이트 버튼이 나오는데 확인 버튼을 누르고 다시시작하면 된다.__
 
 <br><br>
 
@@ -112,21 +112,13 @@ mfc100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로그
 
 <br>
 
-<center>
-
 ![OpenApiErrormfcdll](./Kiwoom-Image/mfc100dll.png)
-
-</center>
 
 KOAStudio를 실행하는 과정에 위의 경고창이 뜬다면 
 
 __첫번째 방법__ 은 사전에 다운받은 OpenAPI폴더(C:\OpenAPI\)에 
 
-<center>
-
 ![OpenApiFile](./Kiwoom-Image/KOAStudioFile.png)
-
-</center>
 
 KOALoader.dll, KOAStudioSA.exe두개의 파일을 이동시켜주면 정상적으로 실행이 된다.
 
