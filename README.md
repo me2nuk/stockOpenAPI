@@ -8,11 +8,13 @@
 
 + [키움 OpenAPI 교육 VOD](https://www.howtostock.com/acdm/getLectureList.action?COUR_SEQ=49&CURR_SEQ=218)
 
-<br><br>
-
-### Kiwoom OpenAPI Contents
+<br>
 
 * * *
+
+<br>
+
+### Kiwoom OpenAPI Contents
 
 <br>
 
@@ -25,9 +27,11 @@
 
 <br>
 
-### Kiwoom OpenApi
-
 * * *
+
+<br>
+
+### Kiwoom OpenApi
 
 <br>
 
@@ -35,9 +39,11 @@
 
 <br>
 
-### OpenAPI Step
-
 * * *
+
+<br>
+
+### OpenAPI Step
 
 <br>
 
@@ -60,11 +66,13 @@
 
     + 상시 모의투자 신청
 
+<br><br>
+
+* * *
+
 <br>
 
 ### kiwoom OpenAPI ErrorMsg
-
-* * *
 
 <br>
 
