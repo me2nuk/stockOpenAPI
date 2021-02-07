@@ -70,14 +70,52 @@
 
 + #### 로그인 버전처리
 
-| 타입 | 이름 | 설명 |
-| ---- | ---- | ---- |
-| LONG | CommConnect() | 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다. |
-| Void | CommTerminate() | 현재 지원하지않는 함수입니다. |
-| LONG | GetConnectState() | 현재 로그인 상태를 알려줍니다. |
-| LONG | GetLoginInfo() | 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. |
-| void | OnEventConnect() | 현재 로그인 상태를 알려줍니다. |
-| void | OnReceiveMsg() | 서버통신한 다음 수신한 메시지를 알려줍니다. |
+    <br>
+
+    | 타입 | 이름 | 설명 |
+    | ---- | ---- | ---- |
+    | LONG | CommConnect() | 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다. |
+    | Void | CommTerminate() | 현재 지원하지않는 함수입니다. |
+    | LONG | GetConnectState() | 현재 로그인 상태를 알려줍니다. |
+    | LONG | GetLoginInfo() | 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. |
+    | void | OnEventConnect() | 현재 로그인 상태를 알려줍니다. |
+    | void | OnReceiveMsg() | 서버통신한 다음 수신한 메시지를 알려줍니다. |
+
+    <br>
+
+    + CommConnect()
+
+        > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
+
+        <br>
+
+    + CommTerminate()
+
+        > 현재 지원하지않는 함수입니다.
+
+        <br>
+
+    + GetConnectState()
+
+        > 현재 로그인 상태를 알려줍니다.
+
+        <br>
+
+    + GetLoginInfo()
+
+        > 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. 
+
+        <br>
+
+    + OnEventConnect()
+
+        > 현재 로그인 상태를 알려줍니다.
+
+        <br>
+
+    + OnReceivMsg()
+
+        > 서버통신한 다음 수신한 메시지를 알려줍니다.
 
 <br>
 
