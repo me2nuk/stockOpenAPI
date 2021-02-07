@@ -261,3 +261,15 @@ QAxBase::setControl: requested control KHOPENAPI.KHOpenAPICtrl.1 could not be in
 
 QAxBase::dynamicCallHelper: Object is not initialized, or initialization failed
 ```
+
+python PyQt 모듈을 사용하여 KHOPENAPI.KHOpenAPICtr1.1 Active를 불러오는 과정에 해당 오류가 난다면 
+
+[KiwoomOpenAPI Module Install](https://www1.kiwoom.com/nkw.templateFrameSet.do?m=m1408000000)
+해당 링크에 들어가 __키움 Open API+ 모듈 다운로드__ 버튼을 눌러 다운로드 하거나
+
+사전에 다운로드했다면 OpenAPISetup.exe를 실행하여
+
+![OpenAPISetup.exe](./Kiwoom-Image/OpenAPI-InstallShield.png)
+
+__제거(R)__ 를 눌러 설치된 모든 기능을 제거한 다음 다시 OpenAPISetup.exe를 실행하고 설치하면된다.
+
