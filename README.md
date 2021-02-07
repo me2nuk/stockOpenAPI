@@ -31,7 +31,7 @@
 
 <br>
 
-![OpenApi](./Kiwoom-Image/OpenApiMainPage.png)
+<p align="center"><img src="./Kiwoom-Image/OpenApiMainPage.png"></p>
 
 <br>
 
