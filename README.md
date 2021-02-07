@@ -254,7 +254,11 @@ MSVCR100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로�
 <p align="center"><img src="./Kiwoom-Image/MSVCR100dll.png"></p>
 
 해당 에러또한 위의 [mfc100.dll](#mfc100dll) 에러와 동일하게 따라하면 해결할 수 있다.
+<br>
 
+* * *
+
+<br>
 ### \# QAxBase Error
 
 ```
@@ -273,7 +277,11 @@ python PyQt 모듈을 사용하여 KHOPENAPI.KHOpenAPICtr1.1 Active를 불러오
 ![OpenAPISetup.exe](./Kiwoom-Image/OpenAPI-InstallShield.png)
 
 __제거(R)__ 를 눌러 설치된 모든 기능을 제거한 다음 다시 OpenAPISetup.exe를 실행하고 설치하면된다.
+<br>
 
+* * *
+
+<br>
 ### \# ModuleNotFoundError
 
 ```
