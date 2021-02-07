@@ -77,7 +77,9 @@
 
 <br>
 
-![OpenAPIErrorkiwoomOpenAPI](./Kiwoom-Image/opstarterOpenAPI_OCX.png)
+<center>
+<img src="./Kiwoom-Image/opstarterOpenAPI_OCX.png" alt="OpenAPIErrorkiwoomOpenAPI" style="display:inline-block;text-aling:center;">
+</center>
 
 
 위의 경고 메세지가뜬다면 현재 실행중인 키움증권 OpenAPI창을 닫고 
