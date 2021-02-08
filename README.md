@@ -21,6 +21,10 @@
     + [Kiwoom OpenAPI Contents](#kiwoom-openapi-contents)
     + [Kiwoom OpenApi](#kiwoom-openapi)
     + [OpenAPI Step](#openapi-step)
+        + [Step1](#Step1)
+        + [Step2](#Step2)
+        + [Step3](#Step3)
+        + [Step4](#Step4)
     + [kiwoom OpenAPI ErrorMsg](#kiwoom-openapi-errormsg)
 
 <br>
@@ -126,7 +130,7 @@
 
         [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_GetLoginInfo.py)
 
-        + #### kiwoom OpanAPI GetLoginInfo() 인자 종류
+        + #### GetLoginInfo() 인자 종류
 
             + ACCOUNT_CNT
                 > 보유계좌 수를 반환합니다.
