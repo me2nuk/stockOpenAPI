@@ -41,22 +41,22 @@
 
 <br>
 
-+ ##### Step1
++ #### Step1
 
    + OpenApi 서비스 사용 신청
 
-+ ##### Step2
++ #### Step2
 
     + 키움 Open API+ 모듈 다운로드
 
-+ ##### Step3
++ #### Step3
 
     + 개발가이드
     + KOA Studio
     + 교육 VOD
     + 자료실
 
-+ ##### Step4
++ #### Step4
 
     + 상시 모의투자 신청
 
@@ -218,10 +218,10 @@ __아직 작성중__
 
 ### \# opstarter
 
->```
->버전 처리를 받으시려면 현재 실행 중인 OpenAPI OCX를 탑재한 프로그램을 종료하신 후 >확인버튼을 눌러주시기 바랍니다.
->그대로 진행시 버전처리가 정상적으로 실행되지 않습니다.
->```
+```
+버전 처리를 받으시려면 현재 실행 중인 OpenAPI OCX를 탑재한 프로그램을 종료하신 후 확인버튼을 눌러주시기 바랍니다.
+그대로 진행시 버전처리가 정상적으로 실행되지 않습니다.
+```
 
 <br>
 
@@ -257,9 +257,9 @@ __확인 버튼을 누른 다음 업데이트 버튼이 나오는데 확인 버�
 
 ### \# mfc100.dll
 
->```
->mfc100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로그램을 다시 설치하면 이 >문제가 해결될 수 있습니다.
->```
+```
+mfc100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로그램을 다시 설치하면 이 문제가 해결될 수 있습니다.
+```
 
 <br>
 
@@ -293,9 +293,9 @@ https://www.microsoft.com/ko-KR/download/confirmation.aspx?id=14632
 
 ### \# MSVCR100.dll
 
->```
->MSVCR100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로그램을 다시 설치하면 이 >문제가 해결될 수 있습니다.
->```
+```
+MSVCR100.dll이(가) 없어 코드 실행을 진행할 수 없습니다. 프로그램을 다시 설치하면 이 문제가 해결될 수 있습니다.
+```
 
 <br>
 
@@ -310,11 +310,11 @@ https://www.microsoft.com/ko-KR/download/confirmation.aspx?id=14632
 
 ### \# QAxBase Error
 
->```
->QAxBase::setControl: requested control KHOPENAPI.KHOpenAPICtrl.1 could not be >instantiated
->
->QAxBase::dynamicCallHelper: Object is not initialized, or initialization failed
->```
+```
+QAxBase::setControl: requested control KHOPENAPI.KHOpenAPICtrl.1 could not be instantiated
+
+QAxBase::dynamicCallHelper: Object is not initialized, or initialization failed
+```
 
 python PyQt 모듈을 사용하여 KHOPENAPI.KHOpenAPICtr1.1 Active를 불러오는 과정에 해당 오류가 난다면 
 
@@ -334,17 +334,17 @@ __제거(R)__ 를 눌러 설치된 모든 기능을 제거한 다음 다시 Open
 
 ### \# ModuleNotFoundError
 
-> ```
->ModuleNotFoundError: No module named 'PyQt5'
->```
+```
+ModuleNotFoundError: No module named 'PyQt5'
+```
 
 <br>
 
 python PyQt5를 사용할때 ModuleNotFoundError 에러가 난다면 cmd 또는 터미널창에
 
-> ```bash
-> pip install PyQt5
-> pip3 install PyQt5
-> ```
+```bash
+pip install PyQt5
+pip3 install PyQt5
+```
 
 본인의 pip 버전에 맞게 PyQt5를 설치하면 된다.
