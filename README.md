@@ -112,10 +112,8 @@
 
         [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_GetConnectState.py)
 
-        <br>
-
         GetConnectState 반환값(return)
-        
+
         | 1 | 0 |
         | - | - |
         | 연결| 연결안됨 |
