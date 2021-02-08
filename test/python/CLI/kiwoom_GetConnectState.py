@@ -3,6 +3,10 @@ from PyQt5.QtWidgets import QApplication
 import sys
 
 class PyQt_kiwoomConnect:
+    """
+    현재 로그인 상태를 알려줍니다.
+    리턴값 1:연결, 0:연결안됨
+    """
     def __init__(self) -> None:
         self.kiwoom = QAxWidget("KHOPENAPI.KHOpenAPICtrl.1")
         self.kiwoom.dynamicCall("CommConnect()")

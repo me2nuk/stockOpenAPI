@@ -2,6 +2,18 @@
 
 <br>
 
+### What is it
+
+이 프로젝트는 키움증권 OpenAPI를 편하게 사용하기 위해 만들어졌으며,
+다양한 가이드와 키움증권 OpenAPI예시 또는 사용법이 있습니다.
+
+| name | Explanation | 현재 상태 |
+| - | - | - |
+| [test](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/) | 키움증권 OpenAPI를 사용한 코드가 작성되어있습니다. | 작성중(X) |
+| Kiwoom-Image | 키움증권 가이드를 작성하면서 사용된 이미지 파일 | 작성중(X) |
+| scripts | 키움증권 OpenAPI 수익을 위해 트레이닝 코드가 들어갈 __예정__ 입니다. | 작성중(X) |
+
+
 + [키움 Open API+](https://www1.kiwoom.com/nkw.templateFrameSet.do?m=m1408000000)
 
 + [키움 OpenAPI+ 개발가이드 PDF](https://download.kiwoom.com/web/openapi/kiwoom_openapi_plus_devguide_ver_1.5.pdf)
@@ -16,8 +28,7 @@
 
 <br>
 
-+ [키움증권 OpenApi](#키움증권-openapi)
-
++ [키움증권 OpenApi](#키움증권-openapi) 
     + [Kiwoom OpenAPI Contents](#kiwoom-openapi-contents)
     + [Kiwoom OpenApi](#kiwoom-openapi)
     + [OpenAPI Step](#openapi-step)
@@ -188,6 +199,15 @@
     + OnEventConnect()
 
         > 현재 로그인 상태를 알려줍니다.
+
+        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_OnEventConnect.py)
+
+        | nErrCode | 상태 |
+        | --------- | --- |
+        | 0 | 로그인 성공 |
+        | -100 | 사용자 정보교환 실패 |
+        | -101 | 서버접속 실패 |
+        | -102 | 버전처리 실패 |
 
         <br>
 
