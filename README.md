@@ -10,7 +10,7 @@
 
 <br><br>
 
-### Kiwoom OpenAPI Contents
+## Kiwoom OpenAPI Contents
 
 * * *
 
@@ -45,7 +45,7 @@
 
 <br>
 
-### Kiwoom OpenApi
+## Kiwoom OpenApi
 
 * * *
 
@@ -55,7 +55,7 @@
 
 <br>
 
-### OpenAPI Step
+## OpenAPI Step
 
 * * *
 
@@ -82,13 +82,13 @@
 
 <br>
 
-### kiwoom OpenAPI Method
+## kiwoom OpenAPI Method
 
 * * *
 
 <br>
 
-+ #### 로그인 버전처리
++ ### 로그인 버전처리
 
     <br>
 
@@ -198,25 +198,25 @@
 
 <br>
 
-+ #### 조회와 실시간데이터처리
++ ### 조회와 실시간데이터처리
   
 __아직 작성중__
 
 <br>
 
-+ #### 주문과 잔고처리
++ ### 주문과 잔고처리
 
 __아직 작성중__
 
 <br>
 
-+ #### 조건검색
++ ### 조건검색
 
 __아직 작성중__
 
 <br>
 
-+ #### 기타함수
++ ### 기타함수
 
 __아직 작성중__
 
