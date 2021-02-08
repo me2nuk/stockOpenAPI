@@ -5,9 +5,10 @@ import sys
 class PyQt_kiwoomConnect:
     def __init__(self) -> None:
         self.kiwoom = QAxWidget("KHOPENAPI.KHOpenAPICtrl.1")
-        self.kiwoom.dynamicCall("CommConnect()")    
-        #self.kiwoom.OnEventConnect.connect(self.Login_Event)
-        self.kiwoom.OnEventConnect.connect(self.Login_Event)
+        self.kiwoom.dynamicCall("CommConnect()")
+        self.kiwoom.dynamicCall("OnEventConnect(QString)", ["Login_Event"])
+
+    #self.kiwoom.OnEventConnect.connect(self.Login_Event)
     def Login_Event(self, err_code):
         if err_code == 0:
             print('키움증권 OpenAPI+ 로그인 성공')
