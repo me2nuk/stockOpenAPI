@@ -87,7 +87,7 @@
 
         > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
 
-        + [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_CommConnect.py)
+        [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_CommConnect.py)
 
         <br>
 
@@ -116,9 +116,9 @@
 
         > 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. 
 
-        + [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_GetLoginInfo.py)
+        [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_GetLoginInfo.py)
 
-        + #### kiwoom OpanAPI GetLoginInfo 인자 종류
+        + #### kiwoom OpanAPI GetLoginInfo() 인자 종류
 
             + ACCOUNT_CNT
                 > 보유계좌 수를 반환합니다.
