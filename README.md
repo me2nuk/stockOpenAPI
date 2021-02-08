@@ -106,7 +106,7 @@
 
         > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_CommConnect.py)
+        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_CommConnect.py)
 
         <br>
 
@@ -129,7 +129,7 @@
 
         > 현재 로그인 상태를 알려줍니다.
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_GetConnectState.py)
+        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_GetConnectState.py)
 
         GetConnectState 반환값(return)
 
@@ -143,7 +143,7 @@
 
         > 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. 
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_GetLoginInfo.py)
+        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_GetLoginInfo.py)
 
         + #### GetLoginInfo() 인자 종류
 
