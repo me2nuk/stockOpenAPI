@@ -25,6 +25,9 @@
         + [Step2](#Step2)
         + [Step3](#Step3)
         + [Step4](#Step4)
+    + [kiwoom openapi method](#kiwoom-openapi-method)
+        + [로그인 버전처리](#로그인-버전처리)
+        + []()
     + [kiwoom OpenAPI ErrorMsg](#kiwoom-openapi-errormsg)
 
 <br>
@@ -87,7 +90,7 @@
 
     <br>
 
-    + CommConnect()
+    + ###### CommConnect()
 
         > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
 
