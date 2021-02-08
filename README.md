@@ -118,6 +118,37 @@
 
         + [example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/kiwoomOpenAPI-testing/python/CLI/kiwoom_GetLoginInfo.py)
 
+        + #### kiwoom OpanAPI GetLoginInfo 인자 종류
+
+            + ACCOUNT_CNT
+                > 보유계좌 수를 반환합니다.
+                <br>
+                
+            + ACCLIST
+                > 구분자 ';'로 연결된 보유계좌 목록을 반환합니다.
+                <br>
+                
+            + USER_ID
+                > 사용자 ID를 반환합니다.
+                <br>
+                
+            + USER_NAME
+                > 사용자 이름을 반환합니다.
+                <br>
+                
+            + KEY_BSECGB
+                > 키보드 보안 해지여부를 반환합니다.(0 : 정상, 1 : 해지)
+                <br>
+                
+            + FIREW_SECGB
+                > 방화벽 설정여부를 반환합니다.(0 : 미설정, 1 : 설정, 2 : 해지)
+                <br>
+                
+            + GetServerGubun
+                > 접속서버 구분을 반환합니다.(1 : 모의투자, 나머지 : 실서버)
+                <br>
+                
+
         <br>
 
     + OnEventConnect()
