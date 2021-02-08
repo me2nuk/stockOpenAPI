@@ -42,6 +42,8 @@
             + [CommTerminate()](#commterminate)
             + [GetConnectState()](#getconnectstate)
             + [GetLoginInfo()](#getlogininfo)
+            + [OnEventConnect](#oneventconnect)
+            + [OnReceivMsg](#onreceivmsg)
         + [조회와 실시간데이터처리](#조회와-실시간데이터처리)
         + [주문과 잔고처리](#주문과-잔고처리)
         + [조건검색](#조건검색)
@@ -196,7 +198,7 @@
 
         <br>
 
-    + OnEventConnect()
+    + #### OnEventConnect()
 
         > 현재 로그인 상태를 알려줍니다.
 
@@ -211,7 +213,7 @@
 
         <br>
 
-    + OnReceivMsg()
+    + #### OnReceivMsg()
 
         > 서버통신한 다음 수신한 메시지를 알려줍니다.
 
