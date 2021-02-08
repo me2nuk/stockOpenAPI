@@ -21,6 +21,7 @@
     + [Kiwoom OpenAPI Contents](#kiwoom-openapi-contents)
     + [Kiwoom OpenApi](#kiwoom-openapi)
     + [OpenAPI Step](#openapi-step)
+
         + [Step1](#Step1)
         + [Step2](#Step2)
         + [Step3](#Step3)
@@ -34,7 +35,6 @@
             + [CommTerminate()](#commterminate)
             + [GetConnectState()](#getconnectstate)
             + [GetLoginInfo()](#getlogininfo)
-            <br>
 
         + [조회와 실시간데이터처리](#조회와-실시간데이터처리)
         + [주문과 잔고처리](#주문과-잔고처리)
@@ -42,6 +42,12 @@
         + [기타함수](#기타함수)
 
     + [kiwoom OpenAPI ErrorMsg](#kiwoom-openapi-errormsg)
+
+        + __[opstarter](#-opstarter)__
+        + __[mfc100.dll](#-mfc100dll)__
+        + __[MSVCR100.dll](#-msvcr100dll)__
+        + __[QAxBase Error](#-qaxbase-error)__
+        + __[ModuleNotFoundError](#-modulenotfounderror)__
 
 <br>
 
