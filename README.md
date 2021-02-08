@@ -25,9 +25,22 @@
         + [Step2](#Step2)
         + [Step3](#Step3)
         + [Step4](#Step4)
+
     + [kiwoom openapi method](#kiwoom-openapi-method)
+
         + [로그인 버전처리](#로그인-버전처리)
-        + []()
+    
+            + [CommConnect()](#commconnect)
+            + [CommTerminate()](#commterminate)
+            + [GetConnectState()](#getconnectstate)
+            + [GetLoginInfo()](#getlogininfo)
+            <br>
+
+        + [조회와 실시간데이터처리](#조회와-실시간데이터처리)
+        + [주문과 잔고처리](#주문과-잔고처리)
+        + [조건검색](#조건검색)
+        + [기타함수](#기타함수)
+
     + [kiwoom OpenAPI ErrorMsg](#kiwoom-openapi-errormsg)
 
 <br>
@@ -107,13 +120,13 @@
 
         <br>
 
-    + CommTerminate()
+    + #### CommTerminate()
 
         > 현재 지원하지않는 함수입니다.
 
         <br>
 
-    + GetConnectState()
+    + #### GetConnectState()
 
         > 현재 로그인 상태를 알려줍니다.
 
@@ -127,7 +140,7 @@
 
         <br>
 
-    + GetLoginInfo()
+    + #### GetLoginInfo()
 
         > 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. 
 
