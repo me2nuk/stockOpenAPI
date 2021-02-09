@@ -55,7 +55,7 @@ class MyWindow(QMainWindow):
         self.kiwoom.OnReceiveTrData.connect(self.receive_trdata)
 
         self.setWindowTitle("PyStock")
-        self.setGeometry(300, 300, 300, 150)
+        self.setGeometry(300, 300, 300, 390)
 
         label = QLabel('종목코드: ', self)
         label.move(20, 20)
@@ -72,9 +72,25 @@ class MyWindow(QMainWindow):
         self.text_edit.setGeometry(10, 60, 280, 80)
         self.text_edit.setEnabled(False)
 
+        lable1 = QLabel('종목코드 조회', self)
+        lable1.move(10, 145)
+
+        self.listWidget = QListWidget(self)
+        self.listWidget.setGeometry(10, 175, 280, 200)
+
     def event_connect(self, err_code):
         if err_code == 0:
             self.text_edit.append("로그인 성공")
+            self.text_edit.append("="*20+"\n")
+            ret = self.kiwoom.dynamicCall("GetCodeListByMarket(QString)", ["0"])
+            kospi_code_list = ret.split(';')
+            kospi_code_name_list = []
+
+            for x in kospi_code_list:
+                name = self.kiwoom.dynamicCall("GetMasterCodeName(QString)", [x])
+                kospi_code_name_list.append(x + " : " + name)
+
+            self.listWidget.addItems(kospi_code_name_list)
 
     def btn1_clicked(self):
         code = self.code_edit.text()
@@ -93,6 +109,7 @@ class MyWindow(QMainWindow):
 
             self.text_edit.append("종목명: " + name.strip())
             self.text_edit.append("거래량: " + volume.strip())
+            self.text_edit.append("-"*20)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

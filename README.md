@@ -44,13 +44,17 @@
             + [GetConnectState()](#getconnectstate)
             + [GetLoginInfo()](#getlogininfo)
             + [OnEventConnect](#oneventconnect)
-            + [OnReceivMsg](#onreceivmsg)
+            + [OnReceivMsg](#onreceivemsg)
         + [조회와 실시간데이터처리](#조회와-실시간데이터처리)
             + [설명](#설명-1)
             + [CommRqData()](#commrqdata)
         + [주문과 잔고처리](#주문과-잔고처리)
         + [조건검색](#조건검색)
         + [기타함수](#기타함수)
+            + [종목정보관련함수](#종목정보관련함수)
+                + [GetCodeListByMarket()](#getcodelistbymarket)
+            + [특수함수](#특수함수)
+                + [KOA_Functions()](#koa_functions)
     + [kiwoom OpenAPI ErrorMsg](#kiwoom-openapi-errormsg)
         + [opstarter](#-opstarter)
         + [mfc100.dll](#-mfc100dll)
@@ -369,7 +373,7 @@ __아직 작성중__
 
 + ### 기타함수
 
-    + #### 종목정보관련함수
+    + ### 종목정보관련함수
 
         | 타입 | 이름 | 설명 |
         | - | - | - |
@@ -390,16 +394,18 @@ __아직 작성중__
 
         <br>
 
-    + #### GetCodeListByMarket()
-        > 국내 주식 시장별 종목코드를 ';'로 구분해서 전달합니다. 만일 시장구분값이 NULL이면 전체 시장코드를 전달합니다.
+        + #### GetCodeListByMarket()
+            > 국내 주식 시장별 종목코드를 ';'로 구분해서 전달합니다. 만일 시장구분값이 NULL이면 전체 시장코드를 전달합니다.
 
-    + #### 특수함수
+            <br>
+
+    + ### 특수함수
 
         | 타입 | 이름 | 설명 |
         | - | - | - |
-        | BSTR | KOA_Functions() | [자세한 내용은 클릭...](#koafunctions) | 
+        | BSTR | KOA_Functions() | [자세한 내용은 클릭...](#koa_functions) | 
 
-        + ##### KOA_Functions()
+        + #### KOA_Functions()
             
             ```
             KOA_Function() 함수는 OpenAPI기본 기능외에 기능을 사용하기 쉽도록 만든 함수이며 두 개 인자값을 사용합니다. 이 함수가 
