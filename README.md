@@ -104,6 +104,8 @@
 
     + 설명
     
+    <br>
+    
     ```
     [로그인 개요]
         로그인은 CommConnect()함수를 호출하며 OnEventConnect 이벤트 인자값으로 로그인 성공여부를 알수 있습니다.
@@ -251,6 +253,8 @@
 
     + 설명
 
+    <br>
+
     ```
     [조회처리(조회요청)]
         OpenAPI가 제공하는 데이터중에서 원하는 데이터를 서버에 요청해서 가져오는 것을     말하는데 TR(Transaction)단위로 처리됩니다.
@@ -339,7 +343,7 @@
     | void | OnReceiveTrData() | 조회요청 응답을 받거나 조회데이터를 수신했을때 호출됩니다. |
     | void | OnReceiveRealData() | 실시간 데이터 수신할때마다 호출되며 SetRealReg()함수로 등록한 실시간 데이터도 이 이벤트로 전달됩니다. |
     | void | OnReceiveMsg() | 서버통신 후 수신한 메시지를 알려줍니다. |
-    
+
     <br>
 
     + #### CommRqData()
