@@ -37,7 +37,7 @@
         + [Step3](#Step3)
         + [Step4](#Step4)
     + [kiwoom openapi method](#kiwoom-openapi-method)
-        + [로그인 버전처리](#로그인-버전처리)
+        + [로그인 버전처리](#로그인%20버전처리)
             + [설명](#설명)
             + [CommConnect()](#commconnect)
             + [CommTerminate()](#commterminate)
@@ -168,7 +168,7 @@
 
         > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
 
-        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_CommConnect.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인%20버전처리/kiwoom_CommConnect.py)
 
         <br>
 
@@ -191,7 +191,7 @@
 
         > 현재 로그인 상태를 알려줍니다.
 
-        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_GetConnectState.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인%20버전처리/kiwoom_GetConnectState.py)
 
         GetConnectState 반환값(return)
 
@@ -205,7 +205,7 @@
 
         > 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. 
 
-        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_GetLoginInfo.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인%20버전처리/kiwoom_GetLoginInfo.py)
 
         + #### GetLoginInfo() 인자 종류
 
@@ -226,7 +226,7 @@
 
         > 현재 로그인 상태를 알려줍니다.
 
-        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_OnEventConnect.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인%20버전처리/kiwoom_OnEventConnect.py)
 
         | nErrCode | 상태 |
         | --------- | --- |
@@ -241,7 +241,7 @@
 
         > 서버통신한 다음 수신한 메시지를 알려줍니다.
 
-        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_OnReceiveMsg.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인%20버전처리/kiwoom_OnReceiveMsg.py)
 
         | 이름 | 설명 |
         | -- | -- |
