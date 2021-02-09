@@ -323,6 +323,25 @@
         이 함수는 조건검색 항목에서 사용법을 설명하고 있습니다.
     ```
 
+    <br>
+
+    | 타입 | 이름 | 설명 |
+    | -- | -- | -- |
+    | LONG | CommRqData() | 조회요청함수이며 빈번하게 조회요청하면 시세과부하 에러값으로 -200이 전달됩니다. |
+    | void | SetInputValue() | 조회요청시 TR의 Input값을 지정하는 함수이며 조회 TR 입력값이 많은 경우 이 함수를 반복적으로 호출합니다. |
+    | BSTR | CommGetData() | 일부 TR에서 사용상 제약이 있음므로 이 함수 대신 GetCommData()함수를 사용하는것을 권장합니다. |
+    | void | DisconnectRealData() | 화면번호 설정한 실시간 데이터를 해지합니다. |
+    | LONG | GetRepeatCnt() | 조회수신한 멀티데이터의 갯수(반복)수를 얻을수 있습니다. |
+    | LONG | CommKwRqData() | 한번에 100종목을 조회할 수 있는 관심종목 조회함수입니다. |
+    | BSTR | GetCommData() | OnReceiveTRData()이벤트가 호출될때 조회데이터를 얻어오는 함수입니다. |
+    | BSTR | GetCommRealData() | OnReceiveRealData()이벤트가 호출될때 실시간데이터를 얻어오는 함수입니다. | 
+    | VARIANT | GetCommDataEx() | 조회 수신데이터 크기가 큰 차트데이터를 한번에 가져올 목적으로 만든 전용함수입니다. |
+    | void | OnReceiveTrData() | 조회요청 응답을 받거나 조회데이터를 수신했을때 호출됩니다. |
+    | void | OnReceiveRealData() | 실시간 데이터 수신할때마다 호출되며 SetRealReg()함수로 등록한 실시간 데이터도 이 이벤트로 전달됩니다. |
+    | void | OnReceiveMsg() | 서버통신 후 수신한 메시지를 알려줍니다. |
+    
+    <br>
+
     + #### CommRqData()
 
         > 
