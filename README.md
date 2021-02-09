@@ -9,8 +9,8 @@
 
 | name | Explanation | 현재 상태 |
 | - | - | - |
-| [test](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/) | 키움증권 OpenAPI를 사용한 코드가 작성되어있습니다. | 작성중(X) |
-| Kiwoom-Image | 키움증권 가이드를 작성하면서 사용된 이미지 파일 | 작성중(X) |
+| [test](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/) | 키움증권 OpenAPI를 사용한 코드가 작성되어있습니다. | 작성중(X) |
+| [Kiwoom-Image](https://github.com/kimminwyk/stockOpenAPI/blob/main/test) | 키움증권 가이드를 작성하면서 사용된 이미지 파일 | 작성중(X) |
 | scripts | 키움증권 OpenAPI 수익을 위해 트레이닝 코드가 들어갈 __예정__ 입니다. | 작성중(X) |
 
 
@@ -38,6 +38,7 @@
         + [Step4](#Step4)
     + [kiwoom openapi method](#kiwoom-openapi-method)
         + [로그인 버전처리](#로그인-버전처리)
+            + [설명](#설명)
             + [CommConnect()](#commconnect)
             + [CommTerminate()](#commterminate)
             + [GetConnectState()](#getconnectstate)
@@ -45,6 +46,8 @@
             + [OnEventConnect](#oneventconnect)
             + [OnReceivMsg](#onreceivmsg)
         + [조회와 실시간데이터처리](#조회와-실시간데이터처리)
+            + [설명](#설명-1)
+            + [CommRqData()](#commrqdata)
         + [주문과 잔고처리](#주문과-잔고처리)
         + [조건검색](#조건검색)
         + [기타함수](#기타함수)
@@ -165,7 +168,7 @@
 
         > 수동 로그인설정인 경우 로그인창출력 후 로그인 시도하거나 자동로그인 설정인 경우 자동으로 로그인을 시도합니다.
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_CommConnect.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_CommConnect.py)
 
         <br>
 
@@ -188,7 +191,7 @@
 
         > 현재 로그인 상태를 알려줍니다.
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_GetConnectState.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_GetConnectState.py)
 
         GetConnectState 반환값(return)
 
@@ -202,7 +205,7 @@
 
         > 로그인 후에만 사용할 수 있으며 인자값에 따라 다양항 정보를 얻을 수 있습니다. 
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_GetLoginInfo.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_GetLoginInfo.py)
 
         + #### GetLoginInfo() 인자 종류
 
@@ -223,7 +226,7 @@
 
         > 현재 로그인 상태를 알려줍니다.
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_OnEventConnect.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_OnEventConnect.py)
 
         | nErrCode | 상태 |
         | --------- | --- |
@@ -238,7 +241,7 @@
 
         > 서버통신한 다음 수신한 메시지를 알려줍니다.
 
-        [Example python](https://github.com/kimminwyk/PrediCtionMoney/blob/main/test/python/CLI/kiwoom_OnReceiveMsg.py)
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/로그인-버전처리/kiwoom_OnReceiveMsg.py)
 
         | 이름 | 설명 |
         | -- | -- |
@@ -348,7 +351,7 @@
 
     + #### CommRqData()
 
-        > 
+        > 조회요청함수이며 빈번하게 조회요청하면 시세과부하 에러값으로 -200이 전달됩니다.
 
 <br>
 

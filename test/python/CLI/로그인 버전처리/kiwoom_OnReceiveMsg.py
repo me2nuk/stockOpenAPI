@@ -33,10 +33,10 @@ class PyQt_kiwoomConnect:
             print('버전처리 실패')
 
     def OnReceiveMsg(self, sScrNo, sRQName, sTrCode, sMsg):
-        print(f"sScrNo : {sScrNo}")
-        print(f"sRQName : {sRQName}")
-        print(f"sTrCode : {sTrCode}")
-        print(f"sMsg : {sMsg}")
+        print(f"sScrNo : {sScrNo}")# 화면번호
+        print(f"sRQName : {sRQName}")# 사용자 구분명
+        print(f"sTrCode : {sTrCode}")# TR이름
+        print(f"sMsg : {sMsg}")# 서버에서 전달하는 메시지
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
