@@ -49,15 +49,24 @@ class PyQt_kiwoomConnect:
         print(f"sMsg : {sMsg}")# 서버에서 전달하는 메시지
 
     def OnReceiveTrData(self, sScrNo, sRQName, sTrCode, sRecordName, sPrevNext, nDataLength, sErrorCode, sMessage, sSplmMsg):
-        print(f"화면번호 : {sScrNo}")
-        print(f"사용자 구분명 : {sRQName}")
-        print(f"TR이름 : {sTrCode}")
-        print(f"레코드 이름 : {sRecordName}")
-        print(f"연속조회 유무를 판단하는 값 0: 연속(추가조회)데이터 없음, 2:연속(추가조회) 데이터 있음 : {sPrevNext}")
-        print(f"사용안함. : {nDataLength}")
-        print(f"사용안함. : {sErrorCode}")
-        print(f"사용안함. : {sMessage}")
-        print(f"사용안함. : {sSplmMsg}")
+        if sRQName == "opt10001_req":
+            name = self.kiwoom.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, 0, "종목명")
+            volume = self.kiwoom.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, 0, "거래량")
+            code = self.kiwoom.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, 0, "종목코드")
+
+            print("종목명: " + name.strip())
+            print("거래량: " + volume.strip())
+            print(f"종목코드 : {code.strip()}")
+            print("-"*20)
+            print(f"화면번호 : {sScrNo}")
+            print(f"사용자 구분명 : {sRQName}")
+            print(f"TR이름 : {sTrCode}")
+            print(f"레코드 이름 : {sRecordName}")
+            print(f"연속조회 유무를 판단하는 값 0: 연속(추가조회)데이터 없음, 2:연속(추가조회) 데이터 있음 : {sPrevNext}")
+            print(f"사용안함. : {nDataLength}")
+            print(f"사용안함. : {sErrorCode}")
+            print(f"사용안함. : {sMessage}")
+            print(f"사용안함. : {sSplmMsg}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

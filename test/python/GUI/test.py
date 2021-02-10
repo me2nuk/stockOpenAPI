@@ -36,7 +36,7 @@ if __name__ == "__main__":
     myWindow = MyWindow()
     myWindow.show()
     sys.exit(app.exec_())"""
-
+"""
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import  *
@@ -115,4 +115,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     myWindow = MyWindow()
     myWindow.show()
-    app.exec_()
+    app.exec_()"""
