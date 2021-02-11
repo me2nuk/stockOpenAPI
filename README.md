@@ -45,19 +45,32 @@
             + [GetConnectState()](#getconnectstate)
             + [GetLoginInfo()](#getlogininfo)
             + [OnEventConnect()](#oneventconnect)
-            + [OnReceivMsg()](#onreceivemsg)
+            + [OnReceiveMsg()](#onreceivemsg)
         + [조회와 실시간데이터처리](#조회와-실시간데이터처리)
             + [설명](#설명-1)
             + [CommRqData()](#commrqdata)
+            + [SetInputValue()](#setinputvalue)
+            + [CommGetData()](#commgetdata)
+            + [DisconnectRealData()](#disconnectrealdata)
+            + [GetRepeatCnt()](#getrepeatcnt)
+            + [CommKwRqData()](#commkwrqdata)
+            + [GetCommData()](#getcommdata)
+            + [GetCommRealData()](#getcommrealdata)
+            + [GetCommDataEx()](#getcommdataex)
+            + [OnReceiveTrData()](#onreceivetrdata)
+            + [OnReceiveRealData()](#onreceiverealdata)
+            + [OnReceiveMsg()](#onreceivemsg-1)
         + [주문과 잔고처리](#주문과-잔고처리)
+            + [설명](#설명-2)
             + [SendOrder()](#sendorder)
             + [SendOrderFO()](#sendorderfo)
             + [SendOrderCredit()](sendordercredit)
             + [GetChejanData()](#getchejandata)
             + [OnReceiveChejanData()](#onreceivechejandata)
-            + [OnReceiveMsg()](#onreceivemsg-1)
-            + [OnReceiveTrData()](#onreceivetrdata)
+            + [OnReceiveMsg()](#onreceivemsg-2)
+            + [OnReceiveTrData()](#onreceivetrdata-1)
         + [조건검색](#조건검색)
+            + [설명](#설명-3)
         + [기타함수](#기타함수)
             + [종목정보관련함수](#종목정보관련함수)
                 + [GetCodeListByMarket()](#getcodelistbymarket)
@@ -608,7 +621,63 @@
 
 + ### 조건검색
 
-__아직 작성중__
+    + #### 설명
+
+    ```
+    [조건검색 개요]
+        OpenAPI에서 제공하는 조건검색 기능은 영웅문HTS에서 작성 조건식을 불러서 사용하는 방식이며 OpenAPI에서 조건검색 수식작성이나
+        수식편집은 지원하지 않습니다.
+        
+        조건검색 관련 6개 함수와 3개 이벤트가 제공되며 이를 이용해서 조건검색과 실시간 조건검색(반복적인 조건검색 요청없이 
+        자동으로 신규종목 편입, 이탈되는 기능)을 설정할수 있습니다.
+        영웅문HTS와 동일하게 실시간 조건검색은 최대 10개 조건식만 실시간 조건검색으로 요청할수 있는데 조건검색 결과가 100종목을 
+        넘게 되면 실시간 조건검색을 할수가 없습니다.
+        
+    [조건검색 제한]
+        조건검색(실시간 조건검색 포함)은 시세조회와 관심종목조회와 합산해서 1초에 5회만 요청 가능하며 1분에 1회로 조건검색 제한됩니다.
+        조건검색 제한에 대한 자세한 내용은 하단을 참고해 주세요.
+        
+        10개 조건검색식을 한번에 모두 조회하는 프로그램이 있으며 조건검색만 요청한다고 가정해서 설명하면 다음과 같습니다.
+                
+    첫번째 제한조건 : 1초에 5회만 조회가능
+    두번째 제한조건 : 조건별 1분당 1회로 제한(실시간 조건검색 수신에는 영향없음)
+        
+    09:00:00  조회 시작
+        1번부터 5번 조건식은 조회성공(첫번째 제한조건, 두번째 제한조건 모두 만족)
+        6번부터 10번 조건식은 조회실패(첫번째 제한조건)
+        
+    09:00:01 조회 재시작(1초후 재조회)
+        1번부터 5번 조건식은 조회실패(두번째 제한조건)
+        6번부터 10번 조건식은 조회성공(첫번째 제한조건, 두번째 제한조건 모두 만족)
+        
+    09:01:00 조회시작 (첫조회 1분후)
+        1번부터 5번 조건식은 조회성공(첫번째 제한조건, 두번째 제한조건 모두 만족)
+        6번부터 10번 조건식은 조회실패(첫번째 제한조건)
+        
+    09:00:01 조회 재시작(1분 1초후 재조회)
+        1번부터 5번 조건식은 조회실패(두번째 제한조건)
+        6번부터 10번 조건식은 조회성공(첫번째 제한조건, 두번째 제한조건 모두 만족)
+                
+    [실시간 조건검색]
+        실시간 조건검색 결과로 100종목 이상이 검색되는 조건식은 실시간 조건검색 실행이 안됩니다.그리고 실시간 조건검색은 모두 10개 
+        조건식만 사용할 수 있습니다.
+    ```
+
+    <br>
+
+    | 타임 | 이름 | 설명 |
+    | - | - | - |
+    | LONG | GetConditionLoad() | 사용자 조건검색 목록을 서버에 요청합니다. 조건검색 목록을 모두 수신하면 OnReceiveConditionVer()이벤트가 호출됩니다. 조건검색 목록 요청을 성공하면 1, 아니면 0을 리턴합니다. |
+    | BSTR | GetConditionNameList() | 서버에서 수신한 사용자 조건식을 조건명 인덱스와 조건식 이름을 한 쌍으로 하는 문자열들로 전달합니다. 조건식 하나는 조건명 인덱스와 조건식 이름은 '^'로 나뉘어져 있으며 각 조건식은 ';'로 나뉘어져 있습니다. 이 함수는 반드시 OnReceiveConditionVer()이벤트에서 사용해야 합니다. |
+    | LONG | SendCondition() | 서버에 조건검색을 요청하는 함수로 맨 마지막 인자값으로 조건검색만 할것인지 실시간 조건검색도 할 것인지를 지정할 수 있습니다. |
+    | void | SendConditionStop() | 조건검색을 중지할 때 사용하는 함수입니다. 조건식 조회할때 얻는 조건식 이름과 조건명 인덱스 쌍을 맞춰서 사용해야 합니다. |
+    | LONG | SetRealReg() | 실시간 시세를 받으려는 종목코드와 FID 리스트를 이용해서 실시간 시세를 등록하는 함수입니다. |
+    | void | SetRealRemove() | 실시간 시세해지 함수이며 화면번호와 종목코드를 이용해서 상세하게 설정할 수 있습니다. |
+    | void | OnReceiveConditionVer() | 사용자 조건식요청에 대한 응답을 서버에서 수신하면 호출되는 이벤트입니다. |
+    | void | OnReceiveTrCondition() |  조건검색 요청으로 검색된 종목코드 리스트를 전달하는 이벤트입니다. 종목코드 리스트는 각 종목코드가 ';'로 구분되서 전달됩니다. |
+    | void | OnReceiveRealCondition() | 실시간 조건검색 요청으로 신규종목이 편입되거나 기존 종목이 이탈될때 마다 호출됩니다. |
+
+    <br>
 
 <br>
 
