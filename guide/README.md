@@ -111,13 +111,30 @@
 
         ![kiwoomOpenAPI-모듈다운로드](../Kiwoom-Image/kiwoomOpenAPI-Step2.png)
 
-        Step2 의 키움 Open API+ 모듈 다운로드 버튼을 누르면 OpenAPISetup.exe 파일이 다운로드 된다.
+        Step2 의 키움 Open API+ 모듈 다운로드 버튼을 누르면 OpenAPISetup.exe 파일이 다운로드 하고
 
         해당 OpenAPISetup.exe파일을 실행시킨 후 쭉 다운로드 진행하면 된다.
 
 <br>
 
 + ### 키움증권 OpenAPI 시작하기
+
+    + #### 키움증권 OpenAPI KOA Studio 다운로드
+
+        KOA Studio프로그램은 다양한 정보와 OpenAPI 개발 가이드가 들어있는 프로그램이다.
+        만약 구글링을 해도 안나올 경우에는 해당 프로그램을 참고하여도 좋다.
+
+        KOA Studio프로그램을 다운로드 하기 위해서는
+
+        <br>
+
+        ![kiwoomKOAStudio](../Kiwoom-Image/kiwoomOpenAPIKOAStudio.png)
+
+        Step3에 있는 KOA Studio 다운로드 버튼을 누르면 KOAStudioSA.zip 파일이 다운로드가 되는데 해당 파일을 압축해제 하고 KOAStudioSA.exe 프로그램을 클릭하여 실행시키면
+
+        ![KiwoomKOAStudio](../Kiwoom-Image/KOAStudio.png)
+
+        이처럼 키움증권 Open API 개발가이드가 있는것을 볼 수 있다.
 
 <br>
 
