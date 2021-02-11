@@ -44,12 +44,19 @@
             + [CommTerminate()](#commterminate)
             + [GetConnectState()](#getconnectstate)
             + [GetLoginInfo()](#getlogininfo)
-            + [OnEventConnect](#oneventconnect)
-            + [OnReceivMsg](#onreceivemsg)
+            + [OnEventConnect()](#oneventconnect)
+            + [OnReceivMsg()](#onreceivemsg)
         + [조회와 실시간데이터처리](#조회와-실시간데이터처리)
             + [설명](#설명-1)
             + [CommRqData()](#commrqdata)
         + [주문과 잔고처리](#주문과-잔고처리)
+            + [SendOrder()](#sendorder)
+            + [SendOrderFO()](#sendorderfo)
+            + [SendOrderCredit()](sendordercredit)
+            + [GetChejanData()](#getchejandata)
+            + [OnReceiveChejanData()](#onreceivechejandata)
+            + [OnReceiveMsg()](#onreceivemsg-1)
+            + [OnReceiveTrData()](#onreceivetrdata)
         + [조건검색](#조건검색)
         + [기타함수](#기타함수)
             + [종목정보관련함수](#종목정보관련함수)
@@ -360,9 +367,91 @@
 
         [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/%EC%A1%B0%ED%9A%8C%EC%99%80%20%EC%8B%A4%EC%8B%9C%EA%B0%84%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%B2%98%EB%A6%AC/kiwoom_CommRqData.py)
 
+    + #### SetInputValue()
+
+        > 조회요청시 TR의 Input값을 지정하는 함수이며 조회 TR 입력값이 많은 경우 이 함수를 반복적으로 호출합니다.
+
+    <br>
+
+    + #### CommGetData()
+
+        > 일부 TR에서 사용상 제약이 있음므로 이 함수 대신 GetCommData()함수를 사용하시기 바랍니다.
+
+    <br>
+
+    + #### DisconnectRealData()
+
+        > 화면번호 설정한 실시간 데이터를 해지합니다.
+
+    <br>
+
+
+    + #### GetRepeatCnt()
+
+        > 조회수신한 멀티데이터의 갯수(반복)수를 얻을수 있습니다. 예를들어 차트조회는 한번에 최대 900개 데이터를 수신할 수 있는데 이렇게 수신한 데이터갯수를 얻을때 사용합니다.
+          이 함수는 반드시 OnReceiveTRData()이벤트가 호출될때 그 안에서 사용해야 합니다.
+
+    <br>
+
+    + #### CommKwRqData()
+
+        > 한번에 100종목을 조회할 수 있는 관심종목 조회함수인데 영웅문HTS [0130] 관심종목 화면과는 이름만 같은뿐 전혀관련이 없습니다.
+          함수인자로 사용하는 종목코드 리스트는 조회하려는 종목코드 사이에 구분자';'를 추가해서 만들면 됩니다.
+          조회데이터는 관심종목정보요청(OPTKWFID) Output을 참고하시면 됩니다.
+          이 TR은 CommKwRqData()함수 전용으로 임의로 사용하시면 에러가 발생합니다.
+
+    <br>
+
+
+    + #### GetCommData()
+
+        > OnReceiveTRData()이벤트가 호출될때 조회데이터를 얻어오는 함수입니다.
+          이 함수는 반드시 OnReceiveTRData()이벤트가 호출될때 그 안에서 사용해야 합니다.
+
+    <br>
+
+    + #### GetCommRealData()
+
+        > OnReceiveRealData()이벤트가 호출될때 실시간데이터를 얻어오는 함수입니다.
+          이 함수는 반드시 OnReceiveRealData()이벤트가 호출될때 그 안에서 사용해야 합니다.
+
+    <br>
+
+    + #### GetCommDataEx()
+
+        > 조회 수신데이터 크기가 큰 차트데이터를 한번에 가져올 목적으로 만든 전용함수입니다.
+
+    <br>
+
+    + #### OnReceiveTrData()
+
+        >  조회요청 응답을 받거나 조회데이터를 수신했을때 호출됩니다.
+          조회데이터는 이 이벤트내부에서 GetCommData()함수를 이용해서 얻어올 수 있습니다.
+    
+    <br>
+
+    + #### OnReceiveRealData()
+
+        >  실시간 데이터 수신할때마다 호출되며 SetRealReg()함수로 등록한 실시간 데이터도 이 이벤트로 전달됩니다.
+          GetCommRealData()함수를 이용해서 실시간 데이터를 얻을수 있습니다.
+
+    <br>
+
+    + #### OnReceiveMsg()
+
+        > 서버통신 후 수신한 메시지를 알려줍니다.
+          메시지에는 6자리 코드번호가 포함되는데 이 코드번호는 통보없이 수시로 변경될 수 있습니다. 따라서 주문이나 오류관련처리를
+          이 코드번호로 분류하시면 안됩니다. 
+
+    <br>
+
 <br>
 
 + ### 주문과 잔고처리
+
+    + #### 설명
+
+    <br>
 
     ```
     [개요]
@@ -477,6 +566,8 @@
         > 9개 인자값을 가진 국내 주식주문 함수이며 리턴값이 0이면 성공이며 나머지는 에러입니다.
           1초에 5회만 주문가능하며 그 이상 주문요청하면 에러 -308을 리턴합니다.
 
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/%EC%A3%BC%EB%AC%B8%EA%B3%BC%20%EC%9E%94%EA%B3%A0%EC%B2%98%EB%A6%AC/kiwoom_SendOrder.py)
+
         <br>
 
     + #### SendOrderFO()
@@ -493,18 +584,25 @@
         > OnReceiveChejan()이벤트가 호출될때 체결정보나 잔고정보를 얻어오는 함수입니다.
           이 함수는 반드시 OnReceiveChejan()이벤트가 호출될때 그 안에서 사용해야 합니다.
 
+        <br>
+
     + #### OnReceiveChejanData()
         > 주문요청후 주문접수, 체결통보, 잔고통보를 수신할 때 마다 호출되며 GetChejanData()함수를 이용해서 상세한 정보를 얻을수 있습니다.
+        
+        <br>
 
     + #### OnReceiveMsg()
         > 서버통신 후 수신한 메시지를 알려줍니다.
           메시지에는 6자리 코드번호가 포함되는데 이 코드번호는 통보없이 수시로 변경될 수 있습니다. 따라서 주문이나 오류관련처리를
           이 코드번호로 분류하시면 안됩니다.
+        
+        <br>
 
     + #### OnReceiveTrData()
         >조회요청 응답을 받거나 조회데이터를 수신했을때 호출됩니다. 
         조회데이터는 이 이벤트에서 GetCommData()함수를 이용해서 얻어올 수 있습니다.
-          
+        
+        <br>
 
 <br>
 
