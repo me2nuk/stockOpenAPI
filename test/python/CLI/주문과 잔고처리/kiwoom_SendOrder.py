@@ -43,8 +43,6 @@ class PyQt_kiwoomConnect:
         self.kiwoom.dynamicCall("CommConnect()")
         self.kiwoom.OnEventConnect.connect(self.OnEventConnect)
         self.kiwoom.OnReceiveMsg.connect(self.OnReceiveMsg)
-        self.kiwoom.OnReceiveTrData.connect(self.OnReceiveTrData)
-        self.kiwoom.OnReceiveChejanData.connect(self.OnReceiveChejanData)
 
     def OnEventConnect(self, err_code):
         if err_code == 0:

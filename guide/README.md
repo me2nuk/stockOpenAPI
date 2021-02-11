@@ -136,6 +136,13 @@
 
         이처럼 키움증권 Open API 개발가이드가 있는것을 볼 수 있다.
 
+    + #### 키움증권 OpenAPI KOA Studio 프로그램 실행 오류
+
+        <br>
+
+        키움증권 OpenAPI KOA Studio프로그램을 실행하는 도중 [파일이름].dll 오류가 난다면
+
+        [키움증권 KOA Studio 오류 해결](https://github.com/kimminwyk/stockOpenAPI#-opstarter)
 <br>
 
 + ### 아나콘다 설치하기
