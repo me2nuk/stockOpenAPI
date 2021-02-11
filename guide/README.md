@@ -90,7 +90,7 @@
 
         Step1 사용신청하러 가기 버튼을 누르고
 
-        ![kiwoomOpenAPI-등록하기](../kiwoom-Image/kiwoomOpenAPI-등록하기.png)
+        ![kiwoomOpenAPI-등록하기](../Kiwoom-Image/kiwoomOpenAPI-등록하기.png)
 
         하단의 동의함버튼을 누른 다음 등록하기 버튼을 누르면된다.
 
@@ -109,7 +109,7 @@
 
         <br>
 
-        ![kiwoomOpenAPI-모듈다운로드](../kiwoom-Image/kiwoomOpenAPI-Step2.png)
+        ![kiwoomOpenAPI-모듈다운로드](../Kiwoom-Image/kiwoomOpenAPI-Step2.png)
 
         Step2 의 키움 Open API+ 모듈 다운로드 버튼을 누르면 OpenAPISetup.exe 파일이 다운로드 된다.
 
