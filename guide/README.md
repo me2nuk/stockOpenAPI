@@ -12,6 +12,8 @@
 + [키움증권이란?](#키움증권이란)
 + [키움 OpenAPI+란?](#키움-openapi-란)
 + [키움증권 OpenAPI사용법](#키움증권-openapi사용법)
+    + [키움증권 OpenAPI 신청하기](#키움증권-openapi-신청하기)
+    + [키움증권 OpenAPI 모듈 다운로드하기](#키움증권-openapi-모듈-다운로드하기)
 + [키움증권 OpenAPI 시작하기](#키움증권-openapi-시작하기)
 + [아나콘다 설치하기](#아나콘다-설치하기)
 + [vscode 설치하기](#vscode-설치하기)
@@ -72,8 +74,46 @@
 
 + ### 키움증권 OpenAPI사용법
 
+    <br>
+
     + #### 키움증권 OpenAPI 신청하기
+
+        [키움증권 OpenAPI 신청 링크](https://www3.kiwoom.com/nkw.templateFrameSet.do?m=m1408010600)
+        
+        위의 링크에 들어간 다음 로그인하고
+
+        <br>
+
+        ![kiwoomOpenAPI-Step1](../Kiwoom-Image/kiwoomOpenAPI-Step1.png)
+
+        <br>
+
+        Step1 사용신청하러 가기 버튼을 누르고
+
+        ![kiwoomOpenAPI-등록하기](../kiwoom-Image/kiwoomOpenAPI-등록하기.png)
+
+        하단의 동의함버튼을 누른 다음 등록하기 버튼을 누르면된다.
+
+        > E-Mail, SMS, ID, 고객명, 해지 등의 개인정보는 가렸다.
+
+        <br>
+
     + #### 키움증권 OpenAPI 모듈 다운로드하기
+
+        python에서 키움증권 OpenAPI기능을 사용하기 위해서는 모듈을 다운받아야된다.
+        키움증권 OpenAPI모듈을 다운받기 위해서는 
+
+        [키움증권 OpenAPI 신청 링크](https://www3.kiwoom.com/nkw.templateFrameSet.do?m=m1408010600)
+
+        위의 링크에 들어간 후 
+
+        <br>
+
+        ![kiwoomOpenAPI-모듈다운로드](../kiwoom-Image/kiwoomOpenAPI-Step2.png)
+
+        Step2 의 키움 Open API+ 모듈 다운로드 버튼을 누르면 OpenAPISetup.exe 파일이 다운로드 된다.
+
+        해당 OpenAPISetup.exe파일을 실행시킨 후 쭉 다운로드 진행하면 된다.
 
 <br>
 
