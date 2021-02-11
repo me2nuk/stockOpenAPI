@@ -12,6 +12,7 @@
 | [test](https://github.com/kimminwyk/stockOpenAPI/tree/main/test) | 키움증권 OpenAPI를 사용한 코드가 작성되어있습니다. | 작성중 |
 | [Kiwoom-Image](https://github.com/kimminwyk/stockOpenAPI/tree/main/scripts) | 키움증권 가이드를 작성하면서 사용된 이미지 파일 | 작성중 |
 | [scripts](https://github.com/kimminwyk/stockOpenAPI/tree/main/scripts) | 키움증권 OpenAPI 수익을 위해 트레이닝 코드가 들어갈 __예정__ 입니다. | 추가 예정 |
+| [guide](https://github.com/kimminwyk/stockOpenAPI/tree/main/guide) | 키움증권 OpenAPI 사용법 가이드입니다. |
 
 <br>
 
