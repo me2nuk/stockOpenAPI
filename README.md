@@ -358,6 +358,8 @@
 
         > 조회요청함수이며 빈번하게 조회요청하면 시세과부하 에러값으로 -200이 전달됩니다.
 
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/%EC%A1%B0%ED%9A%8C%EC%99%80%20%EC%8B%A4%EC%8B%9C%EA%B0%84%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%B2%98%EB%A6%AC/kiwoom_CommRqData.py)
+
 <br>
 
 + ### 주문과 잔고처리
@@ -582,6 +584,8 @@ __아직 작성중__
                 함수반환값은 "시장구분값,업종코드,업종명|시장구분값,업종코드,업종명|...|시장구분값,업종코드,업종명" 형식입니다.
                 즉 하나의 업종코드는 입력한 시장구분값과 업종코드 그리고 그 업종명이 쉼표(,)로 구분되며 각 업종코드는 '|'로 구분됩니다.
             ```
+
+            [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/%EA%B8%B0%ED%83%80%ED%95%A8%EC%88%98/%ED%8A%B9%EC%88%98%ED%95%A8%EC%88%98/kiwoom_KOA_Functions.py)
 
 <br>
 

@@ -50,6 +50,19 @@ class PyQt_kiwoomConnect:
         if err_code == 0:
             print('키움증권 OpenAPI+ 로그인 성공')
             self.kiwoom.KOA_Functions("ShowAccountWindow","")
+            #계좌비밀번호 설정창
+
+            SerVerConnect = int(self.kiwoom.KOA_Functions("GetServerGubun",""))
+            #접속서버 구분 알려줌
+            if SerVerConnect == 1:
+                print(f'모의투자 접속 : {SerVerConnect}')
+            else:
+                print(f'실서버 접속 : {SerVerConnect}')
+
+            GetMater = self.kiwoom.KOA_Functions("GetMasterStockInfo", "039490")
+            #주식종목 시장구분, 종목분류등 정보제공
+            print("="*20+"\nGetMasterStockInfo")
+            print('\n'.join(str(GetMater).split('|')))
             
         elif err_code == -100:
             print('사용자 정보교환 실패')
