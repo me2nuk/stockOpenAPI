@@ -23,13 +23,6 @@
 + [PyQt5모듈 gui 띄우기](#pyqt5모듈-gui-띄우기)
 + [PyQt5모듈을 이용하여 키움증권 OpenAPI 연동하기](#pyqt5모듈을-이용하여-키움증권-openapi-연동하기)
 + [PyQt5모듈을 이용하여 키움증권 OpenAPI 로그인하기](#pyqt5모듈을-이용하여-키움증권-openapi-로그인하기)
-+ [PyQt5모듈을 이용하여 키움증권 OpenAPI 로그인 상태 확인하기](#pyqt5모듈을-이용하여-키움증권-openapi-로그인-상태-확인하기)
-+ [PyQt5모듈을 이용하여 키움증권에 로그인 후 다양한 정보 가져오기](#pyqt5모듈을-이용하여-키움증권에-로그인-후-다양한-정보-가져오기)
-+ [PyQt5모듈을 이용하여 로그인 버전처리하기](#pyqt5모듈을-이용하여-로그인-버전처리하기)
-+ [PyQt5모듈을 이용하여 키움증권 조회와 실시간데이터처리하기](#pyqt5모듈을-이용하여-키움증권-조회와-실시간데이터처리하기)
-+ [PyQt5모듈을 이용하여 키움증권 주문과 잔고처리하기](#pyqt5모듈을-이용하여-키움증권-주문과-잔고처리하기)
-+ [PyQt5모듈을 이용하여 키움증권 조건검색하기](#pyqt5모듈을-이용하여-키움증권-조건검색하기)
-+ [PyQt5모듈을 이용하여 키움증권 기타함수 사용하기](#pyqt5모듈을-이용하여-키움증권-기타함수-사용하기)
 
 <br>
 
@@ -142,65 +135,162 @@
 
         키움증권 OpenAPI KOA Studio프로그램을 실행하는 도중 [파일이름].dll 오류가 난다면
 
-        [키움증권 KOA Studio 오류 해결](https://github.com/kimminwyk/stockOpenAPI#-opstarter)
+        [키움증권 KOA Studio 오류 해결](https://github.com/kimminwyk/stockOpenAPI#-opstarter) 
+        해당 링크를 참고하면 된다.
 <br>
 
 + ### 아나콘다 설치하기
+
+일반적으로 키움증권 OpenAPI를 PyQt5모듈로 사용흘 하게되는데
+
+키움증권 OpenAPI모듈은 32비트에서만 원활하게 사용이 가능하므로
+아나콘다를 설치하여 가상 32bit환경을 만들어주도록 해야한다.
+
+[아나콘다 32bit 다운로드 링크](https://www.anaconda.com/products/individual)
+
+해당 아나콘다 프로그램 설치 완료한 다음 
+
+윈도우키 눌르고 anaconda prompt 프로그램을 실행한 다음
+
+```bash
+set CONDA_FORCE_32BIT=1
+conda create -n py37_32 python=(원하는 python버전대) anaconda
+conda activate py37_32
+
+ex)
+set CONDA_FORCE_32BIT=1
+conda create -n py38_32 python=3.8 anaconda
+conda activate py38_32
+```
+
+위의 커멘를 입력하면 py38_32 이름으로 원하는 python 버전대 32비트 가상환경이 만들어지게 된다.
 
 <br>
 
 + ### vscode 설치하기
 
+그리고 python를 사용하기위해서는 에디터를 사용하기때문에
+python을 실행하기 좋은 에디터(파이참, vscode, 주피터 등)가 많이 존재하지만
+
+가벼운 용량에 그리 나쁘지않고 편한 vscode를 사용할것이다.
+
+vscode 에디터를 사용하기 위해서는 
+
+[vscode 다운로드 링크](https://code.visualstudio.com/download)에 들어가서 자신의 운영체제에 맞게 다운로드하면 된다.
+
 <br>
 
 + ### 아나콘다에서 vscode열기
+
+아나콘다와 vscode 다운로드가 완료되었다면
+
+![Applicationson](../Kiwoom-Image/Applicationson.png)
+
+윈도우키를 누른다음 Anaconda Navigator 프로그램을 실행시킨 다음 위의 사진대로 
+
+Applications on을 자신이 만든 py[이름]으로 바꾸고 VS Code 부분의 Launch버튼을 누르면 된다.
+
+정상적으로 vscode가 실행하고
+자신이 설정한 python버전대가 맞는지 확인하는 쉬운 방법은
+
+```py
+import sys
+print(sys.version)
+```
+
+위의 파이썬 소스코드를 그대로 쓴다음
+
+![vscodesys.version](../Kiwoom-Image/vscodesys.version.png)
+
+Ctrl + F5단축키를 눌러 실행시키면 해당 사진처럼 (파이썬 버전대) (default, (시간)) [환경 상태]이런 형식으로 되어있는데
+
+우측 환경상태 부분에 64bit가 아닌 32bit라고 뜨면 성공이다.
 
 <br>
 
 + ### vscode에서 python 버전 설정하기
 
+만약 아나콘다에서 일일히 vscode실행하기 싫거나 여러 파이썬 버전대를 사용하고 싶을때는
+
+vscode를 실행한 다음
+
+단축키<Ctrl+Shift+p>를 누르면 창이 하나 뜨게되는게 거기에서 Python: Select interpreter을 입력한 다음 누르면 파이썬 버전대 여러개가 나오게되는데
+
+우리가 사용할려는 python 버전대를 클릭한 다음 실행하면 된다.
+
 <br>
 
 + ### python PyQt5 모듈 설치하기
+
+python은 어떠한 모듈을 pip로 설치하기 위해서는
+
+```bash
+pip install <module name>
+```
+이런식으로 콘솔에 입력해야된다.
+
+윈도우의 경우 파워쉘이나 cmd에 입력하면 된다.
+
+```bash
+pip install PyQt5
+```
+
+위의 명령어 그대로 입력하면 다운로드가 되는것을 볼 수 있다.
 
 <br>
 
 + ### PyQt5모듈 gui 띄우기
 
-<br>
+PyQt5 모듈을 정상적으로 설치에 완료했다면
 
-+ ### PyQt5모듈을 이용하여 키움증권 OpenAPI 연동하기
+```py
+import sys
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import  *
+from PyQt5.QAxContainer import *
+
+class MyWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    myWindow = MyWindow()
+    myWindow.show()
+    app.exec_()
+```
+
+이 소스코드를 이용하여 실행시키면 gui가 띄워진다.
 
 <br>
 
 + ### PyQt5모듈을 이용하여 키움증권 OpenAPI 로그인하기
 
-<br>
+```py
+import sys
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import  *
+from PyQt5.QAxContainer import *
 
-+ ### PyQt5모듈을 이용하여 키움증권 OpenAPI 로그인 상태 확인하기
+class MyWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
 
-<br>
+        self.kiwoom = QAxWidget("KHOPENAPI.KHOpenAPICtrl.1")
+        self.kiwoom.dynamicCall("CommConnect()")
 
-+ ### PyQt5모듈을 이용하여 키움증권에 로그인 후 다양한 정보 가져오기
+        self.kiwoom.OnEventConnect.connect(self.event_connect)
 
-<br>
+    def event_connect(self, err_code):
+        if err_code == 0:
+            print('로그인 성공')
+            
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    myWindow = MyWindow()
+    myWindow.show()
+    app.exec_()
+```
 
-+ ### PyQt5모듈을 이용하여 로그인 버전처리하기
-
-<br>
-
-+ ### PyQt5모듈을 이용하여 키움증권 조회와 실시간데이터처리하기
-
-<br>
-
-+ ### PyQt5모듈을 이용하여 키움증권 주문과 잔고처리하기
-
-<br>
-
-+ ### PyQt5모듈을 이용하여 키움증권 조건검색하기
-
-<br>
-
-+ ### PyQt5모듈을 이용하여 키움증권 기타함수 사용하기
-
-<br>
+위의 소스코드를 이용하여 키움증권 OpenAPI를 사용하기 위해 QAxWidget 라는 함수로 KHOPENAPI.KHOpenAPICtrl.1를 호출한 다음
+dynamicCall를 이용하여 로그인을 하기 위해 CommConnect() 함수를 넣으면 된다.
