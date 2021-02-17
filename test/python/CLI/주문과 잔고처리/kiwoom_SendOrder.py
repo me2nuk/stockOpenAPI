@@ -48,10 +48,12 @@ class PyQt_kiwoomConnect:
         if err_code == 0:
             print('키움증권 OpenAPI+ 로그인 성공')
             self.kiwoom.KOA_Functions("ShowAccountWindow","")
+            send = self.kiwoom.SendOrder('주식매수','10011', '8157939411', 2, "060310", 1, 0, '03', "")
+            print(send)
             send = self.kiwoom.SendOrder('주식매도','10011', '8157939411', 1, "060310", 1, 0, '03', "")
             print(send)
             
-        elif err_code == -100:
+        elif err_code == -100: 
             print('사용자 정보교환 실패')
         elif err_code == -101:
             print('서버접속 실패')
@@ -59,10 +61,10 @@ class PyQt_kiwoomConnect:
             print('버전처리 실패')
 
     def OnReceiveMsg(self, sScrNo, sRQName, sTrCode, sMsg):
-        print(f"sScrNo : {sScrNo}")# 화면번호
-        print(f"sRQName : {sRQName}")# 사용자 구분명
-        print(f"sTrCode : {sTrCode}")# TR이름
-        print(f"sMsg : {sMsg}")# 서버에서 전달하는 메시지
+        print(f"화면번호 : {sScrNo}")# 화면번호
+        print(f"사용자 구분명 : {sRQName}")# 사용자 구분명
+        print(f"TR이름 : {sTrCode}")# TR이름
+        print(f"서버에서 전달하는 메시지 : {sMsg}")# 서버에서 전달하는 메시지
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
