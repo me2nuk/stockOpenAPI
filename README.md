@@ -459,6 +459,15 @@
           메시지에는 6자리 코드번호가 포함되는데 이 코드번호는 통보없이 수시로 변경될 수 있습니다. 따라서 주문이나 오류관련처리를
           이 코드번호로 분류하시면 안됩니다. 
 
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/%EC%A1%B0%ED%9A%8C%EC%99%80%20%EC%8B%A4%EC%8B%9C%EA%B0%84%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%B2%98%EB%A6%AC/kiwoom_CommRqData.py)
+
+        | 이름 | 설명 |
+        | -- | -- |
+        | sScrNo | 화면번호 |
+        | sRQName | 사용자 구분명 |
+        | sTrCode | TR이름 | 
+        | sMsg | 서버에서 전달하는 메세지 |
+
     <br>
 
 <br>
@@ -584,6 +593,35 @@
 
         [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/%EC%A3%BC%EB%AC%B8%EA%B3%BC%20%EC%9E%94%EA%B3%A0%EC%B2%98%EB%A6%AC/kiwoom_SendOrder.py)
 
+        + #### SeneOrder 함수 인자
+
+            ```
+            SendOrder(
+                BSTR sRQName, // 사용자 구분명
+                BSTR sScreenNo, // 화면번호
+                BSTR sAccNo,  // 계좌번호 10자리
+                LONG nOrderType,  // 주문유형 1:신규매수, 2:신규매도 3:매수취소, 4:매도취소, 5:매수정정, 6:매도정정
+                BSTR sCode, // 종목코드
+                LONG nQty,  // 주문수량
+                LONG nPrice, // 주문가격
+                BSTR sHogaGb,   // 거래구분(혹은 호가구분)은 아래 참고
+                BSTR sOrgOrderNo  // 원주문번호입니다. 신규주문에는 공백, 정정(취소)주문할 원주문번호를 입력합니다.
+            )
+            ```
+
+            해당 함수는 sRQName에 의해 주식 매도, 주식 매수등의 기능이 결정되는것이 아닌, nOrderType인자로 인해 바뀌게됩니다.
+
+            1:신규매수, 2:신규매도 3:매수취소, 4:매도취소, 5:매수정정, 6:매도정정
+
+            | 인자 값 | 설명 |
+            | - | - |
+            | 1 | 신규매수 |
+            | 2 | 신규매도 |
+            | 3 | 매수취소 |
+            | 4 | 매도취소 |
+            | 5 | 매수정정 |
+            | 6 | 매도정정 |
+
         <br>
 
     + #### SendOrderFO()
@@ -612,6 +650,15 @@
           메시지에는 6자리 코드번호가 포함되는데 이 코드번호는 통보없이 수시로 변경될 수 있습니다. 따라서 주문이나 오류관련처리를
           이 코드번호로 분류하시면 안됩니다.
         
+        [Example python](https://github.com/kimminwyk/stockOpenAPI/blob/main/test/python/CLI/%EC%A1%B0%ED%9A%8C%EC%99%80%20%EC%8B%A4%EC%8B%9C%EA%B0%84%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%B2%98%EB%A6%AC/kiwoom_CommRqData.py)
+
+        | 이름 | 설명 |
+        | -- | -- |
+        | sScrNo | 화면번호 |
+        | sRQName | 사용자 구분명 |
+        | sTrCode | TR이름 | 
+        | sMsg | 서버에서 전달하는 메세지 |
+
         <br>
 
     + #### OnReceiveTrData()
